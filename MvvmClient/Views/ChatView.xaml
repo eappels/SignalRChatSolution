@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MvvmClient.Views"
+             xmlns:helpers="clr-namespace:MvvmClient.Helpers"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
@@ -17,7 +18,7 @@
             <Button x:Name="Connect" Content="Connect" Command="{Binding ConnectCommand}" Width="100"/>
         </StackPanel>
         
-        <ScrollViewer Grid.Row="1" Grid.Column="0" VerticalScrollBarVisibility="Auto">
+        <ScrollViewer Grid.Row="1" Grid.Column="0" VerticalScrollBarVisibility="Auto" helpers:ScrollViewerExtensions.AlwaysScrollToEnd="True">
             <ListBox ItemsSource="{Binding Messages}" HorizontalAlignment="Stretch" BorderThickness="0"/>
         </ScrollViewer>
 
