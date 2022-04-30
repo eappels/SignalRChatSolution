@@ -104,13 +104,12 @@ namespace MvvmClient.ViewModels
         {
             try
             {
-                Connection.StartAsync();
+                await Connection.StartAsync();
                 Messages.Add("Connecting...");
             }
             catch (Exception ex)
             {
                 Messages.Add(ex.Message);
-                Debug.WriteLine(ex);
             }
         }
 
